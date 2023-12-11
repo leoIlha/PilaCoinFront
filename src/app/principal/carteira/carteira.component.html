@@ -1,0 +1,54 @@
+
+<div class="transferencia">
+  <button (click)="atualizarDados()" class="btn btn-lg btn-success btn-block">Atualizar dados</button>
+  <h2>Transferir Pila</h2>
+  <form id="add-form" (ngSubmit)="f.form.valid && transferirPila()" #f="ngForm" novalidate class="needs-validation">
+
+    <div class="form-group">
+      <label for="usuario">Usuário</label>
+      <div class="input-group">
+        <select [(ngModel)]="usuario.nome" id="usuario" name="usuario" #model="ngModel" required class="form-control">
+          <option value="" disabled selected>Selecione um Usuário</option>
+          <option *ngFor="let usuario of usuarios" [value]="usuario.nome">{{usuario.nome}}</option>
+        </select>
+      </div>
+
+      <label for="pila">Pila</label>
+      <div class="input-group">
+        <select [(ngModel)]="pila.id" id="pila" name="pila" #model="ngModel" required class="form-control">
+          <option value="" disabled selected>Selecione uma Pila</option>
+          <option *ngFor="let p of pilas" [value]="p.id">{{p.id}}</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-lg btn-success btn-block">Confirmar</button>
+    <br>
+  </form>
+</div>
+
+<div class="tabelas">
+  <p>Total de blocos na carteira: {{blocos.length}}</p>
+  <h2>Pilas na carteira </h2>
+  <p>Total de pilas na carteira: {{pilas.length}}</p>
+
+  <div class="table-container">
+    <table id="tabelaPilasMineradas" class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome Minerador</th>
+        <th>Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let pila of pilas">
+        <td>{{ pila.id }}</td>
+        <td>{{ pila.nomeCriador }}</td>
+        <td>{{ pila.status }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

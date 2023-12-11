@@ -10,12 +10,14 @@ import {PrincipalModule} from "./principal/principal.module";
 import {ErrorHandlerService} from "./security/error-handler.service";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {JwtinterceptorService} from "./security/jwtinterceptor.service";
+import { CarteiraComponent } from './principal/carteira/carteira.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CarteiraComponent,
 
 
   ],

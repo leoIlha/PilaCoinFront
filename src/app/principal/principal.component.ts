@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from "../login/login.service";
 import { Funcionario } from '../model/funcionario';
-import {FuncionariosService} from "./funcionarios/funcionarios.service";
 import {SharedService} from "../shared.service";
 import {HomeComponent} from "../home/home.component";
 

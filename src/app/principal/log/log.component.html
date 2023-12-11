@@ -1,0 +1,72 @@
+<!-- log.component.html -->
+<div class="container">
+  <div class="divLogs">
+    <h2>Logs de Mineração de Pila</h2>
+    <div class="log-section" id="logMineracaoPila">
+      <div *ngIf="logMineracaoPila.length === 0; else temLogMP">
+        <h4>Sem Logs</h4>
+      </div>
+      <ng-template #temLogMP>
+        <pre>{{logMineracaoPila.join('\n')}}</pre>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="divLogs">
+    <h2>Logs de Mineração de Bloco</h2>
+    <div class="log-section" id="logMineracaoBloco">
+      <div *ngIf="logMineracaoBloco.length === 0; else temLogMB">
+        <h4>Sem Logs</h4>
+      </div>
+      <ng-template #temLogMB>
+        <pre>{{logMineracaoBloco.join('\n')}}</pre>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="divLogs">
+    <h2>Logs de Validação de Pila</h2>
+    <div class="log-section" id="logValidacaoPila">
+      <div *ngIf="logValidacaoPila.length === 0; else temLogVP">
+        <h4>Sem Logs</h4>
+      </div>
+      <ng-template #temLogVP>
+        <pre>{{logValidacaoPila.join('\n')}}</pre>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="divLogs">
+    <h2>Logs de Validação de Bloco</h2>
+    <div class="log-section" id="logValidacaoBloco">
+      <div *ngIf="logValidacaoBloco.length === 0; else temLogVB">
+        <h4>Sem Logs</h4>
+      </div>
+      <ng-template #temLogVB>
+        <pre>{{logValidacaoBloco.join('\n')}}</pre>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="divLogs">
+    <h2>Logs das Mensagens</h2>
+    <div class="log-section" id="logMensagens">
+      <div *ngIf="logMensagens.length === 0; else temLogM">
+        <h4>Sem Logs</h4>
+      </div>
+      <ng-template #temLogM>
+        <pre>{{logMensagens.join('\n')}}</pre>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
